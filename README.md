@@ -4,22 +4,46 @@
 Infraestrutura AWS com Terraform
 Este projeto demonstra como criar uma infraestrutura completa na AWS usando Terraform. A arquitetura inclui uma Virtual Private Cloud (VPC) com sub-redes públicas e privadas, um Internet Gateway, um NAT Gateway, um Auto Scaling Group e um Application Load Balancer.
 
+
 Visão Geral da Arquitetura
 A arquitetura consiste nos seguintes componentes:
 
+
 VPC: Uma Virtual Private Cloud para hospedar seus recursos AWS.
+
 Sub-rede Pública: Uma sub-rede para recursos que precisam ser acessíveis pela internet, como o Application Load Balancer e o NAT Gateway.
+
 Sub-rede Privada: Uma sub-rede para recursos que não devem ser acessíveis diretamente pela internet, como as instâncias EC2 no Auto Scaling Group.
+
 Internet Gateway: Permite a comunicação entre os recursos na VPC e a internet.
+
 NAT Gateway: Fornece acesso à internet para instâncias na sub-rede privada.
+
 Application Load Balancer (ALB): Distribui o tráfego de entrada entre várias instâncias EC2 no Auto Scaling Group.
+
 Auto Scaling Group (ASG): Ajusta automaticamente o número de instâncias EC2 em resposta à demanda.
-Pré-requisitos
+
+## Pré-requisitos
 Antes de começar, certifique-se de ter o seguinte:
 
-Uma conta AWS com permissões apropriadas para criar os recursos.
-Terraform instalado na sua máquina local.
-AWS CLI configurado com suas credenciais.
+1º Uma conta AWS com permissões apropriadas para criar os recursos.
+2º Terraform instalado na sua máquina local.
+3º AWS CLI configurado com suas credenciais.
+
+Uso
+1. Clone o Repositório
+git clone https://github.com/Lopeswaprojetos/My-aws-terraform
+2. Inicialize o Terraform
+Antes de implantar a infraestrutura, inicialize a configuração do Terraform.
+3. Revise e Modifique as Variáveis
+Revise o arquivo variables.tf para ajustar os valores conforme necessário para o seu ambiente.
+4. Planeje a Implantação
+Gere um plano de execução para ver o que o Terraform criará ou modificará.
+5. Implemente a Infraestrutura
+Aplique a configuração do Terraform para criar a infraestrutura.
+6. Saídas
+Após a conclusão da implantação, o Terraform exibirá os detalhes dos recursos criados. Essas saídas incluem o ID da VPC, IDs das Subnets, nome DNS do ALB, etc.
+
 
 ## Providers
 
