@@ -2,6 +2,7 @@
 ## Requirements
 
 Infraestrutura AWS com Terraform
+
 Este projeto demonstra como criar uma infraestrutura completa na AWS usando Terraform. A arquitetura inclui uma Virtual Private Cloud (VPC) com sub-redes públicas e privadas, um Internet Gateway, um NAT Gateway, um Auto Scaling Group e um Application Load Balancer.
 
 
@@ -30,7 +31,7 @@ Antes de começar, certifique-se de ter o seguinte:
 2º Terraform instalado na sua máquina local.
 3º AWS CLI configurado com suas credenciais.
 
-Uso
+## Uso
 1. Clone o Repositório
 git clone https://github.com/Lopeswaprojetos/My-aws-terraform
 2. Inicialize o Terraform
