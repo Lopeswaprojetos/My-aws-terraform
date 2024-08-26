@@ -1,7 +1,25 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+Infraestrutura AWS com Terraform
+Este projeto demonstra como criar uma infraestrutura completa na AWS usando Terraform. A arquitetura inclui uma Virtual Private Cloud (VPC) com sub-redes públicas e privadas, um Internet Gateway, um NAT Gateway, um Auto Scaling Group e um Application Load Balancer.
+
+Visão Geral da Arquitetura
+A arquitetura consiste nos seguintes componentes:
+
+VPC: Uma Virtual Private Cloud para hospedar seus recursos AWS.
+Sub-rede Pública: Uma sub-rede para recursos que precisam ser acessíveis pela internet, como o Application Load Balancer e o NAT Gateway.
+Sub-rede Privada: Uma sub-rede para recursos que não devem ser acessíveis diretamente pela internet, como as instâncias EC2 no Auto Scaling Group.
+Internet Gateway: Permite a comunicação entre os recursos na VPC e a internet.
+NAT Gateway: Fornece acesso à internet para instâncias na sub-rede privada.
+Application Load Balancer (ALB): Distribui o tráfego de entrada entre várias instâncias EC2 no Auto Scaling Group.
+Auto Scaling Group (ASG): Ajusta automaticamente o número de instâncias EC2 em resposta à demanda.
+Pré-requisitos
+Antes de começar, certifique-se de ter o seguinte:
+
+Uma conta AWS com permissões apropriadas para criar os recursos.
+Terraform instalado na sua máquina local.
+AWS CLI configurado com suas credenciais.
 
 ## Providers
 
